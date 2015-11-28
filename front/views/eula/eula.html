@@ -1,0 +1,9 @@
+<div ng-controller='EulaController as vm'>
+<div id="nd_eula">
+  <div id="pdf">
+   <iframe src="{{vm.eulaPath}}" style="width: 100%; height: 100%;" frameborder="0" scrolling="no">
+   </iframe>
+ </div>
+   <input id="check_agree" type="checkbox" ng-model="vm.agreed">{{vm.agreeText}}</input>
+</div>
+</div>

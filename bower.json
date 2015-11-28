@@ -1,0 +1,22 @@
+{
+  "name": "nd-proj",
+  "version": "0.0.0",
+  "directory": "front/bower_components",
+  "dependencies": {
+    "angular": ">=1.2.*",
+    "angular-bootstrap": "~0.11.0",
+    "angular-resource": ">=1.2.*",
+    "angular-sanitize": ">=1.2.*",
+    "angular-ui-router": "~0.2.10",
+    "bootstrap": "~3.1.1",
+    "font-awesome": ">=4.1.0",
+    "jquery": "~1.11.0",
+    "json3": "~3.3.1",
+    "nd-angular": "latest",
+    "q": "~1.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.2.*",
+    "angular-scenario": ">=1.2.*"
+  }
+}

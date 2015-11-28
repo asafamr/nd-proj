@@ -1,0 +1,12 @@
+<div ng-controller='ConclusionController as vm'>
+  <h1 id="conclusion_header">Installation complete</h1>
+  <div id="conclusion_v"><span class="mega-octicon octicon-check"></span></div>
+  <form id="conclusion_form">
+    <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="vm.runServer"> Run server
+    </label>
+  </div>
+  </form>
+  <button id="finish_button" class="btn btn-default" ng-click="vm.finish()">Finish and close</button>
+</div>

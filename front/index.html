@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nuclear Duck</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- sets base path for all relative paths-->
+		<base href="">
+		<script>
+			(function(){
+				var url =document.location.href;
+				var app=url.substring(0, url.lastIndexOf("/") + 1);
+				document.getElementsByTagName('base')[0].href=app;
+			})();
+
+   	window.name='NG_DEFER_BOOTSTRAP!';
+		</script>
+
+		<!-- build:css(client) vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/jstree/dist/themes/default/style.css" />
+		<link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css({.tmp,client}) app.css -->
+
+		<!-- injector:css -->
+		<!--link rel="stylesheet" href="/views/app.css"-->
+		<!-- endinjector -->
+		<!-- endbuild -->
+		<link href="style.css" rel="stylesheet">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+	</head>
+	<body ng-app="myApp" ng-controller="MainController" >
+		<nd-window-frame show-toggle-fullscreen="false"></nd-window-frame>
+
+		
+		<div ui-view="" class="view-animate" ></div>
+		<nd-pager back-text='<span class="octicon octicon-arrow-left"></span> Back' next-text='Next <span class="octicon octicon-arrow-right"></span>' ></nd-pager>
+
+		<script src="config.js"></script>
+		<!-- build:js({client,node_modules}) vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/json3/lib/json3.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/api-check/dist/api-check.js"></script>
+		<script src="bower_components/jstree/dist/jstree.js"></script>
+		<script src="bower_components/ng-js-tree/dist/ngJsTree.js"></script>
+		<script src="bower_components/q/q.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!--script src="bower_components/nd-angular/dist/nd-angular.js"></script-->
+
+
+		<script src="scripts/app.js"></script>
+		<script src="views/welcome/welcome.controller.js"></script>
+		<script src="views/config/config.controller.js"></script>
+		<script src="views/conclusion/conclusion.controller.js"></script>
+		<script src="views/eula/eula.controller.js"></script>
+		<script src="views/extract/extract.controller.js"></script>
+
+		<script src="bower_components/nd-angular/src/nd-angular.js"></script>
+		<script src="bower_components/nd-angular/src/directives/window-frame/window-frame.js"></script>
+		<script src="bower_components/nd-angular/src/directives/window-frame/window-frame.controller.js"></script>
+
+		<script src="bower_components/nd-angular/src/directives/pager/pager.js"></script>
+		<script src="bower_components/nd-angular/src/directives/pager/pager.controller.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/dir/dir.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/dir/dir.controller.js"></script>
+		<script src="bower_components/nd-angular/src/directives/dir-select/dir-select.js"></script>
+		<script src="bower_components/nd-angular/src/directives/dir-select/dir-select.controller.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/progress/progress.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/progress/progress.controller.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/eula/eula.js"></script>
+		<script src="bower_components/nd-angular/src/directives/page-directives/eula/eula.controller.js"></script>
+		<script src="bower_components/nd-angular/src/services/ui_actions/ui_actions.service.js"></script>
+		<script src="bower_components/nd-angular/src/services/pager/pager.service.js"></script>
+		<script src="bower_components/nd-angular/src/services/ui_events/ui_events.service.js"></script>
+		<script src="bower_components/nd-angular/src/services/job_manager/jobmanager.service.js"></script>
+		<script src="bower_components/nd-angular/src/services/window/window.service.js"></script>
+		<!-- build:js({.tmp,client}) app/app.js -->
+
+		<!-- injector:js -->
+		<!-- endinjector -->
+		<!-- endbuild -->
+
+
+		<!--script type="text/javascript" src="../duck_modules/main.js"></script-->
+		<!--script>
+			//var DuckCore = require('../duck_modules/duck-core.js');
+			//document.write(DuckCore.os());
+			var Gaze = require('gaze').Gaze;
+			var gaze = new Gaze('**/*');
+
+			gaze.on('all', function(event, filepath) {
+				if (location)
+					location.reload();
+			});
+			var gui = require('nw.gui');
+			gui.App.clearCache();
+			var url =document.location.href;
+			//$('base').href=url.substring(0, url.lastIndexOf("/") + 1);
+
+
+
+
+		</script-->
+
+	</body>
+</html>

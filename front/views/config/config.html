@@ -1,0 +1,52 @@
+<div ng-controller='ConfigController as vm'>
+
+<form id="config_form">
+  <div class="form-group">
+    <label for="adminPass">Admin password:</label>
+    <input type="password" class="form-control" id="adminPass" ng-model='vm.formData.adminPass'>
+  </div>
+
+
+  <div class="form-group">
+    <label for="http">HTTP port:</label>
+    <input type="number" min="1" max="65535" class="form-control port_input" id="http" ng-model='vm.formData.http' ng-change='vm.httpPortChecked="not checked"' >
+    <button type="button" class="btn btn-default open_check_button" ng-click="vm.checkPort(vm.formData.http,'httpPortChecked')">Check</button>
+    <div class="open_status">
+    <div ng-if='vm.httpPortChecked=="open"'>
+      <span class="octicon octicon-check"></span>
+      Open
+    </div>
+    <div ng-if='vm.httpPortChecked=="closed"'>
+      <span class="octicon octicon-x"></span>
+      Occupied
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <label for="shutdown">Shutdown port:</label>
+    <input type="number" min="1" max="65535" class="form-control port_input" id="shutdown" ng-model='vm.formData.shutdown' ng-change='vm.shutdownPortChecked="not checked"' >
+    <button type="button" class="btn btn-default open_check_button" ng-click="vm.checkPort(vm.formData.shutdown,'shutdownPortChecked')">Check</button>
+    <div class="open_status">
+    <div ng-if='vm.shutdownPortChecked=="open"'>
+      <span class="octicon octicon-check"></span>
+      Open
+    </div>
+    <div ng-if='vm.shutdownPortChecked=="closed"'>
+      <span class="octicon octicon-x"></span>
+      Occupied
+    </div>
+  </div>
+  </div>
+    <div class="form-group">
+    <label >Installation dir:</label>
+    <nd-dir-select dir='vm.formData.installDir' button-class="btn btn-default" button-text="Choose..." input-class="form-control" ></nd-dir-select>
+  </div>
+</form>
+<div id="config_form_errors">
+  <ul>
+    <li ng-repeat="err in vm.formErrors">
+      {{err}}
+    </li>
+  </ul>
+</div>
+</div>

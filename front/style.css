@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+body{
+  font-family: 'Montserrat';
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+#top-stock{
+  background-image: url(images/stock.jpg);
+  background-size: 100%;
+  background-position-y: -20px;
+  width: 100%;
+  position: absolute;
+  height: 180px;
+  top: 25px;
+  box-shadow: 0px 2px white, 0px 5px #AFAFAF;
+}
+#logo{
+  background-image: url(images/logo.png);
+  background-size: 100%;
+  width: 100px;
+  position: absolute;
+  height: 100px;
+  top: 160px;
+  left: 100px;
+  border: 1px solid white;
+}
+#small-letters{
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+#moto{
+  position: absolute;
+  left: 205px;
+  top: 230px;
+  font-size: 17px;
+}
+#installation{
+  position: absolute;
+    top: 260px;
+    font-size: 30px;
+    left: 105px;
+}
+#nd_pager{
+  cursor: pointer;
+  z-index: 10;
+}
+#nd_pager div{
+  transition: 0.2s;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  line-height: 50px;
+  top: 370px;
+}
+#nd_pager_next{
+  right:0px;
+  text-align: right;
+  padding-right:10px;
+}
+#nd_pager_back{
+
+  left:0px;
+  text-align: left;
+  padding-left:10px;
+}
+#nd_pager_back.nd-hidden{
+  left:-200px;
+}
+#nd_pager_next.nd-hidden{
+  right:-200px;
+}
+#nd_eula
+{
+  width:100%;
+}
+
+#nd_eula #pdf{
+  width: 470px;
+  height: 250px;
+  margin: 40px auto 20px;
+  border: solid 1px #909090;
+  padding: 5px;
+  border-radius: 5px;
+}
+#nd_eula #check_agree
+{
+  margin-left: 150px;
+  text-align: left;
+  margin-right: 10px;
+}
+#nd_frame
+{
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-top: solid 30px black;
+  border-left: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+  z-index: 20;
+  top: 0px;
+}
+.nd_frame_button {
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #424242;
+  color: #989898;
+  z-index: 30;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -24px;
+  margin-right: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  -webkit-app-region: no-drag;
+}
+#nd_frame_close{
+  right: -5px;
+}
+#nd_frame_toggle{
+  right: 20px;
+}
+#nd_frame_min
+{
+  padding-top: 5px;
+  right: 20px;
+}
+
+
+#nd_frame_spacer{
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  z-index: 29;
+  height: 30px;
+}
+
+.view-animate-container {
+
+}
+
+.view-animate {
+  position: absolute;
+  width: 100%;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  transition:all 0.2s;
+}
+
+.view-animate.ng-enter {
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+.view-animate.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.view-animate.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+#config_form
+{
+  width: 350px;
+  margin: 20px auto;
+}
+
+#config_form .form-group
+{
+  margin-bottom: 6px;
+}
+#config_form input
+{
+  height: 25px;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+#config_form label
+{
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.port_input
+{
+  width: 85px;
+}
+.open_check_button
+{
+  position: absolute;
+  height: 25px;
+  line-height: 0px;
+  margin-top: -25px;
+  margin-left: 90px;
+}
+#config_form nd-dir-select input{
+  width: 260px;
+}
+#config_form nd-dir-select .btn {
+  height: 25px;
+  line-height: 10px;
+  margin-top: -48px;
+  margin-left: 265px;
+}
+#config_form_errors
+{
+  width: 360px;
+  margin: auto;
+  color: red;
+  font-size: 12px;
+}
+.open_status
+{
+  position: absolute;
+  margin-top: -22px;
+  margin-left: 165px;
+}
+#extract_progress{
+  margin: 25px auto auto auto;
+  width: 400px;
+}
+#embedded_video
+{
+  width: 566px;
+  height: 320px;
+  margin: 10px auto;
+  border: solid 3px;
+}
+h1#conclusion_header {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+#finish_button{
+  display: block;
+  margin: auto;
+}
+form#conclusion_form {
+  margin: 250px auto 0px auto;
+  width: 200px;
+  display: block;
+  text-align: center;
+}
+div#conclusion_v {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+div#conclusion_v .mega-octicon
+{
+  font-size:256px;
+}

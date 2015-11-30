@@ -184,17 +184,8 @@ module.exports = function (grunt) {
 
 
 
-  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('default', ['nd_debug']);
 
-	grunt.registerTask('serve',function (target) {
-    void target;
-		return grunt.task.run(
-		[
-
-		'wiredep',
-		'injector',
-    'shell:runNW'
-  ]);});
 
 
 

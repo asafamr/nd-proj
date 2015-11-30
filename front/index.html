@@ -17,15 +17,11 @@
 
 		<!-- build:css(client) vendor.css -->
 		<!-- bower:css -->
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-		<link rel="stylesheet" href="bower_components/jstree/dist/themes/default/style.css" />
-		<link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css({.tmp,client}) app.css -->
 
 		<!-- injector:css -->
-		<!--link rel="stylesheet" href="/views/app.css"-->
 		<!-- endinjector -->
 		<!-- endbuild -->
 		<link href="style.css" rel="stylesheet">
@@ -35,7 +31,7 @@
 	<body ng-app="myApp" ng-controller="MainController" >
 		<nd-window-frame show-toggle-fullscreen="false"></nd-window-frame>
 
-		
+
 		<div ui-view="" class="view-animate" ></div>
 		<nd-pager back-text='<span class="octicon octicon-arrow-left"></span> Back' next-text='Next <span class="octicon octicon-arrow-right"></span>' ></nd-pager>
 
@@ -44,17 +40,12 @@
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
-		<script src="bower_components/json3/lib/json3.js"></script>
-		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-		<script src="bower_components/angular-resource/angular-resource.js"></script>
-		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-		<script src="bower_components/angular-animate/angular-animate.js"></script>
 		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-		<script src="bower_components/api-check/dist/api-check.js"></script>
-		<script src="bower_components/jstree/dist/jstree.js"></script>
-		<script src="bower_components/ng-js-tree/dist/ngJsTree.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/json3/lib/json3.js"></script>
 		<script src="bower_components/q/q.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
@@ -90,6 +81,11 @@
 		<!-- build:js({.tmp,client}) app/app.js -->
 
 		<!-- injector:js -->
+		<script src="/front/views/conclusion/conclusion.controller.js"></script>
+		<script src="/front/views/config/config.controller.js"></script>
+		<script src="/front/views/eula/eula.controller.js"></script>
+		<script src="/front/views/extract/extract.controller.js"></script>
+		<script src="/front/views/welcome/welcome.controller.js"></script>
 		<!-- endinjector -->
 		<!-- endbuild -->
 

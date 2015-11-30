@@ -7,7 +7,7 @@
 	function EulaController($scope,ndPager)
 	{
 		var vm=this;
-		vm.eulaPath='etc/eula.pdf';
+		vm.eulaPath='etc/eula.htm';
 		vm.agreeText='I agree to these terms and conditions';
 		vm.agreed=false;
 		activate();

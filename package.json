@@ -13,13 +13,13 @@
     "grunt-injector": "^0.6.1",
     "grunt-shell": "^1.1.2",
     "grunt-wiredep": "^2.0.0",
-    "nd-grunt": "0.0.0"
+    "nd-grunt": "latest"
 
   },
   "dependencies": {
     "bluebird": "^3.0.5",
     "lodash": "^3.10.1",
-    "nd-node": "0.0.0",
+    "nd-node": "latest",
     "portastic": "^1.0.1"
   }
 }

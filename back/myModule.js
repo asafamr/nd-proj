@@ -52,8 +52,10 @@ function myModuleFactory($job,$uiactions,$utils,$state,$logger)
     });
   }
   /**
-  this function test if <port> is open
-  it is registered as action and will be available in the UI frontend
+  this function tests if <port> is open
+  it is registered as an action and will be available in the UI frontend
+  @param port port to open
+  @returns a promise resolving to true if port is open
   **/
   function checkPortOpen(port)
   {

@@ -10,14 +10,8 @@
     var vm = this;
 		void vm;
 		activate();
-
-
 		function activate ()
 		{
-
-
 		}
-
-
 	}
 })();

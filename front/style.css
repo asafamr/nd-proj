@@ -7,6 +7,7 @@ body{
   font-family: 'Montserrat';
   -webkit-user-select: none;
   overflow: hidden;
+  margin: 0;
 }
 #top-stock{
   background-image: url(images/stock.jpg);
@@ -128,15 +129,15 @@ body{
   -webkit-app-region: no-drag;
 }
 #nd_frame_close{
-  right: -5px;
+  right: 5px;
 }
 #nd_frame_toggle{
   right: 20px;
 }
 #nd_frame_min
 {
-  padding-top: 5px;
-  right: 20px;
+  right: 30px;
+  line-height: 30px;
 }
 
 

@@ -32,7 +32,10 @@ function ConfigController(ndActions,$scope,ndPager)
     {
       vm[out]='closed';
     }
-    ndActions.checkPortOpen(number).then(function(isOpen){vm[out]=isOpen&&'open'||'closed';});
+    ndActions.checkPortOpen(number).then(
+      function(isOpen){
+        vm[out]=isOpen&&'open'||'closed';
+      });
   }
   function validate()
   {

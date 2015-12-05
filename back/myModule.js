@@ -6,15 +6,15 @@ var fs = require('fs');
 var writeFilePromisified=BBPromise.promisify(fs.writeFile);
 var path = require('path');
 
-//these ndjs modules will be injected for us
-myModuleFactory.$inject=['$job','$uiActions','$utils','$state','$logger'];
 module.exports=myModuleFactory;
 
+//these ndjs modules will be injected for us
+myModuleFactory.$inject=['$job','$uiActions','$utils','$state','$logger'];
 function myModuleFactory($job,$uiactions,$utils,$state,$logger)
 {
   $logger.debug('registering myModule');
-  //we register two actions and one jobtype to ndjs
-  //these two actions will later be available in the angualr ui frontent
+  //we register two actions and one jobtype
+  //these two actions will later be available in the angualr ui frontend
   $uiactions.registerAction(
     'checkPortOpen'/*action name*/,
     ['port']/*param names*/,
@@ -66,7 +66,6 @@ function myModuleFactory($job,$uiactions,$utils,$state,$logger)
     var installDir=$state.getSettings('user.config.installDir');
     var binDir=path.join(installDir,'bin');
     var runCmd=path.join(installDir,'bin','startup.bat');
-
     return $utils.runShellCmdAndDetach(runCmd,[],binDir);//returns a promise
   }
   function getDefaultDir()
@@ -78,13 +77,6 @@ function myModuleFactory($job,$uiactions,$utils,$state,$logger)
     {
       return path.join(process.env.programfiles,'my-server');
     }
-
   }
-
-
-
-
-
   return {};//our module publish no interface
-
 }

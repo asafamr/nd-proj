@@ -9,7 +9,7 @@
     "bootstrap": "~3.1.1",
     "jquery": "~1.11.0",
     "json3": "~3.3.1",
-    "nd-angular": "latest",
+    "nd-angular": "latest"
   },
   "devDependencies": {
   }

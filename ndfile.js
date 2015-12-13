@@ -4,60 +4,54 @@ module.exports = function (ndjs) {
 {
   'options':
   {
-    'frontend':'front',
-    'backend':'back',
-    'outgoing':'outgoing',
-    'etc':'etc',
-
-    'window':
+    'frontend':'front',/*UI views directory*/
+    'backend':'back',/*custom NDJS modules directory*/
+    'outgoing':'outgoing',/*directory of file to be compressed and distibuted with installer*/
+    'etc':'etc',/*directory of other assets - icon for example*/
+    'window':/*will be included in nwjs setting file: https://github.com/nwjs/nw.js/wiki/manifest-format#window-subfields */
     {
       'frame':false,
-      'toolbar': false,
+      'toolbar': true,
       'width': 720,
       'height': 440,
-	    'icon': 'duck.png'
+	    'icon': 'images/duck.png'
     },
-
+    /* meta fields of exe*/
     'description':'my first NDJS installer',
     'productname':'my NDJS installer',
     'company':'ACME',
     'version':'1.0.0.0',
     'icon':'duck.ico'
-
   },
+  /*install stage*/
 	'install':
 	{
-		'pages':
+		'pages':  /*install stage pages*/
 		[
-      'welcome','eula','config','extract','conclusion'
+      'welcome','eula','config','extract','conclusion','abort'
 		],
-		'jobs':
+		'jobs':/*install stage jobs*/
 		{
       'main':
 			{'type':'multi','settings':{'subJobs':[
-				{'type':'extract','settings':{'files':[
-          {'from':'tomcat','to':'<%=user.config.installDir%>','size':109},
-          {'from':'jre','to':'<%=user.config.installDir%>/jre','size':93},
+				{'type':'sfx','settings':{'files':[
+          {'from':'tomcat','to':'<%=user.config.installDir%>','size':14},
+          {'from':'jre','to':'<%=user.config.installDir%>/jre','size':94},
           {'from':'webapp','to':'<%=user.config.installDir%>/webapps/ROOT','size':0}]}},
         {'type':'myConfig'}
 			]}}
 		}
 	},
+  /*uninstall stage*/
 	'uninstall':
 	{
-		'pages':
-		[
-			{'name':'confirm','type':'custom'},
-			{'name':'remove','type':'progress','settings':{'job':'remove'}},
-			{'name':'conclusion','type':'custom'}
+		'pages':/*uninstall stage pages*/
+    [
+      'confirm','uninstallprogress','bye'
 		],
-		'jobs':
-		[
-			{'name':'remove','settings':[{'type':'delete',settings:{dir:''}}]}
-
-			]
-
-	}
+		'jobs':{/*uninstall stage jobs*/
+    'remove':
+      {'type':'delete','settings':{}}
+	}}
 });
-
 };

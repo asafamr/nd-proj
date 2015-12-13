@@ -5,12 +5,13 @@ var BBPromise = require('bluebird');
 var fs = require('fs');
 var writeFilePromisified=BBPromise.promisify(fs.writeFile);
 var path = require('path');
+var _ = require('lodash');
 
 module.exports=myModuleFactory;
 
 //these ndjs modules will be injected for us
-myModuleFactory.$inject=['$job','$uiActions','$utils','$state','$logger'];
-function myModuleFactory($job,$uiactions,$utils,$state,$logger)
+myModuleFactory.$inject=['$job','$uiActions','$utils','$state','$logger','$fs'];
+function myModuleFactory($job,$uiactions,$utils,$state,$logger,$fs)
 {
   $logger.debug('registering myModule');
   //we register two actions and one jobtype
@@ -21,6 +22,7 @@ function myModuleFactory($job,$uiactions,$utils,$state,$logger)
     checkPortOpen/*callback function to run*/);
   $uiactions.registerAction('runServer',[],runServer);
   $uiactions.registerAction('getDefaultDir',[],getDefaultDir);
+  $uiactions.registerAction('checkDirEmpty',['dir'],checkDirEmpty);
 
   //register job type myConfig - specified to run in ndfile.js
   $job.registerJobType(myConfigJobFactory,'myConfig');
@@ -77,6 +79,12 @@ function myModuleFactory($job,$uiactions,$utils,$state,$logger)
     {
       return path.join(process.env.programfiles,'my-server');
     }
+  }
+
+  function checkDirEmpty(dir)
+  {
+    debugger;
+    
   }
   return {};//our module publish no interface
 }

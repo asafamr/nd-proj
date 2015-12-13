@@ -262,3 +262,56 @@ div#conclusion_v .mega-octicon
 {
   font-size:256px;
 }
+
+.modal-header {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.modal-footer {
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+.modal button.btn {
+    color: black;
+    margin: 5px !important;
+}
+
+.modal {
+  text-align: center;
+}
+
+.modal:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%;
+}
+.modal.fade
+{
+  overflow:hidden;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+div#abort_x {
+    /* position: absolute; */
+    width: 100%;
+    text-align: center;
+}
+h1#abort_header {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+div#abort_x .mega-octicon
+{
+  font-size:256px;
+}

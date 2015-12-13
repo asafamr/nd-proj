@@ -4,7 +4,7 @@
   "directory": "front/bower_components",
   "dependencies": {
     "angular": ">=1.2.*",
-    "angular-bootstrap": "~0.11.0",
+    "angular-bootstrap": "*",
     "angular-sanitize": ">=1.2.*",
     "bootstrap": "~3.1.1",
     "jquery": "~1.11.0",
